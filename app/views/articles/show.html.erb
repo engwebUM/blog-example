@@ -1,5 +1,7 @@
 <h1><%= @article.title %></h1>
 
-<p><%= @article.created_at %></p>
+<p><%= l @article.created_at, format: :short %></p>
+
+<p><%= t 'articles.show.word_count', word_count: @article.word_count %></p>
 
 <p><%= @article.body %></p>

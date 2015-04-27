@@ -1,7 +1,7 @@
-en:
+pt:
   articles:
     show:
-      word_count: "There are %{word_count} words"
+      word_count: "Há %{word_count} palavras"
 
   time:
     formats:

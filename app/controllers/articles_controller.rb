@@ -1,3 +1,5 @@
+require_relative '../presenters/article_presenter'
+
 class ArticlesController < ApplicationController
   before_action :require_login, only: :show
 
@@ -6,6 +8,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = ArticlePresenter.new(
+      ArticleWithStats.new(
+        Article.find(params[:id])
+      )
+    )
   end
 end
